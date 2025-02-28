@@ -5,6 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        //Template string
+        let user = "Yahoo baba";
+        let marks = 777;
+        // document.write(`Hello "${user}" your marks '${marks}'`);
+        let message = `This is a 
+multi-line message 
+in JavaScript.`;
+        let firstname = "Yahoo";
+        let lastname = "Baba";
+
+        function fullname(fname, lname) {
+            return `${fname} ${lname}`
+        }
+        let hello = `Hello ${fullname(firstname,lastname)}`;
+        //document.write(hello);
+
+        //arrow function---------
+        /*let hello2 = () => {
+            console.log("hello");
+            console.log("Jinnie");
+        };
+        hello2();
+        let welcome = (name, age) => {
+            return `Hello and welcome ${name} - ${age}`;
+        }
+        console.log(welcome("Banashree", 40));
+
+        //more short form ---without {}---
+        let welcome2 = (name, age) => `Welcome ${name} - ${age}`;
+        console.log(welcome2("Banashree", 40));
+
+        //if there is only one parameter
+        let welcome3 = name => `Welcome ${name}`;
+        console.log(welcome3("Banashree"));*/
+
+        //------rest operator---
+
+        let welcome = (name, course, ...args) => {
+            document.write(`Hello ${name} ` + "<br>");
+            document.write(`Course :${course}` + "<br>");
+            let sum = 0;
+            for (let i in args) {
+                sum += args[i];
+            };
+            //return sum;
+            document.write(`Marks: ${sum}`);
+
+        }
+        welcome("Banashree", "MSc", 20, 30);
+    </script>
 </head>
 
 <body>
